@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ANIMATED CSS PROJECTS</title>
+
+<style>
+
+	body{
+	width: 100%;
+	height: 100vh;
+		background: linear-gradient(red, green, blue);
+		padding: 50px;
+	}
+
+	#loader{
+	
+		height: 60px;
+		width: 60px;
+		border: 5px solid transparent;
+		border-radius: 50%;
+		border-top-color: grey;
+		border-left-color: grey;
+		border-right-color: grey;
+		animation:rotate  1s infinite;
+	}
+
+	@keyframes rotate{
+		100%{
+			rotate: 360deg;
+		}
+	}
+
+
+h1{
+	position: relative;
+	font-weight: bolder;
+	font-size: 38px;
+}
+
+h1::after{
+	content: "";
+	width: 0%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 4px;
+background-color:#000;
+transition: all ease-in-out 2s;
+
+}
+
+h1:hover::after{
+	width: 26%;
+	cursor: pointer;
+}
+.page1{
+	height: 300%;
+	width: 100%;
+	
+}
+
+body::-webkit-scrollbar{
+	background-color: transparent;
+	border-radius: 10%;
+}
+
+body::-webkit-scrollbar-thumb{
+	background: linear-gradient(red,green,blue);
+}
+</style>
+</head>
+<body>
+
+	<div id="loader"></div>
+	<h1>Animation</h1>
+	<div class="page1"></div>
+	
+</body>
+</html>
